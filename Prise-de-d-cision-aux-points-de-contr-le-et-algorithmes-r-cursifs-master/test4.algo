@@ -1,0 +1,106 @@
+ALGORITHM bissextile
+VAR
+    annee:INTEGER
+BEGIN
+    ecrire(donner la valeur de l annee)
+    lire(annee)
+    IF(annee/4==0 && annee/100!=0 || annee/400==0) THEN
+    ecrire(L annee est une annee bissextile!)
+    ELSE
+    ecrire(L annee n est pas une annee bissextile!)
+    END_IF
+END
+ALGORITHM age
+VAR
+    x:INTEGER
+    prix:INTEGER
+BEGIN
+    ecrire(donner la valeur de x)
+    lire(x)
+    IF (x <= 12) THEN
+        ecrire(prix=12)
+    ELSE_IF (x >= 13 && x <= 17) THEN
+        ecrire(prix=15)
+    ELSE
+        ecrire(prix=20)
+    END_IF
+END
+
+FUNCTION temperature(temps:INTEGER) : string
+BEGIN
+    ecrire( Entrez la température actuelle en degrés Celsius : )
+    lire (temps)
+    IF (temps >= 25) THEN
+          ecrire (Il fait chaud, vous devriez porter des vêtements légers.)
+    ELSE_IF (15 <= temps < 20) THEN
+        ecrire (Il fait frais, vous devriez porter un pull léger ou une veste.)
+    ELSE
+        ecrire (Il fait froid, pensez à porter un manteau chaud et des vêtements épais.)
+    END_IF
+END
+FUNCTION pluie(reponse:string) : BOOLEAN
+BEGIN
+    ecrire(Est-ce qu il pleut ? (true/false) )
+    lire (reponse)
+    IF(reponse === "true") THEN
+        pluie = TRUE
+    else
+        pluie = FALSE
+    END_IF 
+    
+END
+
+
+ALGORITHM chinia ta9is lyouma
+VAR
+    temps:INTEGER
+    reponse:BOOLEAN
+BEGIN
+   ecrire(a3tini ta9is)
+   lire(temps)
+    ecrire(fama mtar?)
+    lire(reponse)
+    pluie(reponse)
+    temperature(temps)
+END
+
+FUNCTION fibbonacci(n:INTEGER) : INTEGER
+IF (n=0) THEN
+   RETURN 0;
+ELSE_IF (n=1) THEN
+   RETURN 1
+ELSE
+    RETURN fibbonacci(n-1) + fibbonacci(n-2)
+END_IF
+END
+
+ALGORITHM fibbonacci
+VAR
+   n:INTEGER
+BEGIN
+    ecrire(donner une valeur de n)
+    lire(n)
+    fibbonacci(n)
+END
+FUNCTION Power(base: integer; exponent: integer): integer;
+BEGIN
+    
+    IF (exponent = 0) THEN
+        Power := 1
+    ELSE
+        Power := base * Power(base, exponent - 1);
+    END_IF
+END
+ALGORITHM power
+VAR
+    base:INTEGER
+    exponent:INTEGER
+BEGIN
+    ecrire(donner une valeur pour la base)
+    lire(base)
+    ecrire(donner la valeur pour l exponent)
+    lire(exponent)
+    power(base,exponent)
+END    
+
+
